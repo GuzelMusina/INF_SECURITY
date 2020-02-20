@@ -3,6 +3,11 @@ Create a simple calculator for count CVSS score
 
 ![Image alt](https://github.com/GuzelMusina/INF_SECURITY/raw/master/example.png)
 
+## CVSS V2 Base Calculator
+Create a simple calculator for count CVSS score
+
+![Image alt](https://github.com/GuzelMusina/INF_SECURITY/raw/master/v2.png)
+
 ## How to use
 Download ZIP file, open in f.e. WebStorm application
 
