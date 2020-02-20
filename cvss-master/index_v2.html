@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Cvss_v2 v2 Base Score Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="cvss_v2.css">
+    <script src="cvss_v2.js"></script>
+    <style>
+        body {
+            background-color: pink;
+            font-family: arial;
+            padding: 1em;
+            align-content: center;
+        }
+
+        @media screen and (min-width: 720px) {
+            #cvssboard {
+                width: 640px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<p>Cvss_v2 v2 Calculator by Guzel Musina 11-702</p>
+<div id="cvssboard">
+</div>
+<script>
+    var c = new Cvss_v2("cvssboard", {
+        onchange: function () {
+            window.location.hash = c.get().vector;
+            c.vector.setAttribute('href', '#' + c.get().vector)
+        }
+    });
+    if (window.location.hash.substring(1).length > 0) {
+        c.set(decodeURIComponent(window.location.hash.substring(1)));
+    }
+</script>
+
+</body>
+
+</html>
